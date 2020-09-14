@@ -37,8 +37,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/GNOME/libhandy/-/archive/0.90.0/libhandy-0.90.0.tar.gz",
-                    "sha256": "3ba14c80ee808011b6e1cb78f3502b27ca761ada76d4ccee397252e26eaab368"
+                    "url" : "https://gitlab.gnome.org/GNOME/libhandy/-/archive/1.0.0/libhandy-1.0.0.tar.gz",
+                    "sha256" : "dc1fff98cbc72a492d1adb489ee1b00e43ab4ac14c983c855ef3df435bbbda27"
                 }
             ]
         },
@@ -48,8 +48,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/BrainBlasted/Solanum/uploads/232919dc564d27c3d2cc9cb426a9e140/solanum-1.0.1.tar.xz",
-                    "sha256" : "a554f3b21415368bbd84b50eaeb9129209b190a4398a8bc5fcb44b64e8403d9e"
+                    "url" : "https://gitlab.gnome.org/BrainBlasted/Solanum/uploads/eb06e35bd9f34b867de66900eebd491f/solanum-1.1.0.tar.xz",
+                    "sha256" : "f044d33480f293895fd90d6060381c978fe58c05e0b4000df699c5f8589f7dbb"
                 }
             ]
         }
