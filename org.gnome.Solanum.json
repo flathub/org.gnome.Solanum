@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gnome.Solanum",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.36",
+    "runtime-version" : "3.38",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -48,7 +48,7 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/BrainBlasted/Solanum/uploads/eb06e35bd9f34b867de66900eebd491f/solanum-1.1.0.tar.xz",
+                    "url" : "https://gitlab.gnome.org/World/Solanum/uploads/eb06e35bd9f34b867de66900eebd491f/solanum-1.1.0.tar.xz",
                     "sha256" : "f044d33480f293895fd90d6060381c978fe58c05e0b4000df699c5f8589f7dbb"
                 }
             ]
