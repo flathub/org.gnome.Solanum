@@ -11,12 +11,14 @@
         "--share=ipc",
         "--socket=fallback-x11",
         "--socket=wayland",
-        "--socket=pulseaudio"
+        "--socket=pulseaudio",
+        "--device=dri"
     ],
     "build-options" : {
         "append-path" : "/usr/lib/sdk/rust-stable/bin",
         "env" : {
-            "CARGO_HOME" : "/run/build/solanum/cargo"
+            "CARGO_HOME" : "/run/build/solanum/cargo",
+            "RUSTFLAGS" : "-L=/app/lib"
         }
     },
     "cleanup" : [
@@ -32,13 +34,76 @@
     ],
     "modules" : [
         {
-            "name" : "libhandy",
-            "buildsystem": "meson",
-            "sources" : [
+            "name" : "pango",
+            "buildsystem" : "meson",
+            "sources" :  [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/GNOME/libhandy/-/archive/1.0.0/libhandy-1.0.0.tar.gz",
-                    "sha256" : "dc1fff98cbc72a492d1adb489ee1b00e43ab4ac14c983c855ef3df435bbbda27"
+                    "url" : "https://download.gnome.org/sources/pango/1.48/pango-1.48.0.tar.xz",
+                    "sha256" : "391f26f3341c2d7053e0fb26a956bd42360dadd825efe7088b1e9340a65e74e6"
+                }
+            ]
+        },
+        {
+            "name": "libsass",
+            "sources": [
+                {
+                    "type" : "archive",
+                    "url" : "https://github.com/sass/libsass/archive/3.6.4.tar.gz",
+                    "sha256": "f9484d9a6df60576e791566eab2f757a97fd414fce01dd41fc0a693ea5db2889"
+                },
+                {
+                    "type" : "script",
+                    "dest-filename" : "autogen.sh",
+                    "commands" : [ "autoreconf -si" ]
+                }
+            ]
+        },
+        {
+            "name": "sassc",
+            "sources": [
+                {
+                    "type" : "archive",
+                    "url" : "https://github.com/lazka/sassc/archive/3.6.1.tar.gz",
+                    "sha256": "8cee391c49a102b4464f86fc40c4ceac3a2ada52a89c4c933d8348e3e4542a60"
+                },
+                {
+                    "type" : "script",
+                    "dest-filename" : "autogen.sh",
+                    "commands" : [ "autoreconf -si" ]
+                }
+            ]
+        },
+        {
+            "name" : "gtk4",
+            "buildsystem" : "meson",
+            "config-opts" : [
+                "-Ddemos=false",
+                "-Dbuild-examples=false",
+                "-Dbuild-tests=false"
+            ],
+            "sources" :  [
+                {
+                    "type" : "archive",
+                    "url" : "https://download.gnome.org/sources/gtk/4.0/gtk-4.0.0.tar.xz",
+                    "sha256" : "d46cf5b127ea27dd9e5d2ff6ed500cb4067eeb2cb1cd2c313ccde8013b0b9bf9"
+                }
+            ]
+        },
+        {
+            "name" : "libhandy",
+            "buildsystem": "meson",
+            "config-opts" : [
+                "-Dvapi=false",
+                "-Dexamples=false",
+                "-Dtests=false"
+            ],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/exalm/libhandy.git",
+                    "branch" : "gtk4",
+                    "commit" : "a934fcd31f0cad4d82d00a2f661bd0610acd8306"
                 }
             ]
         },
@@ -48,8 +113,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/World/Solanum/uploads/eb06e35bd9f34b867de66900eebd491f/solanum-1.1.0.tar.xz",
-                    "sha256" : "f044d33480f293895fd90d6060381c978fe58c05e0b4000df699c5f8589f7dbb"
+                    "url" : "https://gitlab.gnome.org/World/Solanum/uploads/f1292e0c38cc0a7fe232087b7ee084ba/solanum-2.0.0.tar.xz",
+                    "sha256" : "62865de046d9e4d9b1b5d5b166e85c8161f4bef5fe955914a7e4d46bff459a6f"
                 }
             ]
         }
