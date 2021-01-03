@@ -30,7 +30,12 @@
         "/share/man",
         "/share/pkgconfig",
         "*.la",
-        "*.a"
+        "*.a",
+        "/lib/girepository-1.0",
+        "/share/gir-1.0",
+        "/bin/gtk4*",
+        "/bin/pango*",
+        "/bin/sassc"
     ],
     "modules" : [
         {
@@ -103,7 +108,7 @@
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/exalm/libhandy.git",
                     "branch" : "gtk4",
-                    "commit" : "a934fcd31f0cad4d82d00a2f661bd0610acd8306"
+                    "commit" : "2f2f7f512c6b41f75316f0462037f87b9776dece"
                 }
             ]
         },
