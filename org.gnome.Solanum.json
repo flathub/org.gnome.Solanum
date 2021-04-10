@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gnome.Solanum",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.38",
+    "runtime-version" : "40",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -33,22 +33,9 @@
         "*.a",
         "/lib/girepository-1.0",
         "/share/gir-1.0",
-        "/bin/gtk4*",
-        "/bin/pango*",
         "/bin/sassc"
     ],
     "modules" : [
-        {
-            "name" : "pango",
-            "buildsystem" : "meson",
-            "sources" :  [
-                {
-                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/pango/1.48/pango-1.48.0.tar.xz",
-                    "sha256" : "391f26f3341c2d7053e0fb26a956bd42360dadd825efe7088b1e9340a65e74e6"
-                }
-            ]
-        },
         {
             "name": "libsass",
             "sources": [
@@ -80,22 +67,6 @@
             ]
         },
         {
-            "name" : "gtk4",
-            "buildsystem" : "meson",
-            "config-opts" : [
-                "-Ddemos=false",
-                "-Dbuild-examples=false",
-                "-Dbuild-tests=false"
-            ],
-            "sources" :  [
-                {
-                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gtk/4.0/gtk-4.0.3.tar.xz",
-                    "sha256" : "d7c9893725790b50bd9a3bb278856d9d543b44b6b9b951d7b60e7bdecc131890"
-                }
-            ]
-        },
-        {
             "name" : "libadwaita",
             "buildsystem": "meson",
             "config-opts" : [
@@ -106,9 +77,9 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://gitlab.gnome.org/exalm/libadwaita.git",
+                    "url" : "https://gitlab.gnome.org/GNOME/libadwaita.git",
                     "branch" : "main",
-                    "commit" : "0a3ec432ce1e635841f56bb23f5e97abdc3c1102"
+                    "commit" : "65ac5258cdcd1c1bfdf2d8f29c9518e16bcca445"
                 }
             ]
         },
