@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gnome.Solanum",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "40",
+    "runtime-version" : "41",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -79,7 +79,7 @@
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/libadwaita.git",
                     "branch" : "main",
-                    "commit" : "65ac5258cdcd1c1bfdf2d8f29c9518e16bcca445"
+                    "commit" : "905c3c4e27eabc94bcbe281e73bb2add5afd8e04"
                 }
             ]
         },
@@ -89,8 +89,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/World/Solanum/uploads/cb1120971ed53facbba0b55c835f4f0d/solanum-2.1.0.tar.xz",
-                    "sha256" : "beef2904647edc59444f57ce29d8a7da4096b44cad41aff0a7f66ee606b9edd2"
+                    "url" : "https://gitlab.gnome.org/World/Solanum/uploads/41b30a72801113fe664008ce940ee3bd/solanum-3.0.0.tar.xz",
+                    "sha256" : "f3dd8d45ca236d97825a251c732e63cd9c185217ff345bb67d38759ba02b8dec"
                 }
             ]
         }
