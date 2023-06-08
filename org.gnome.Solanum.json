@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gnome.Solanum",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "42",
+    "runtime-version" : "44",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -33,6 +33,17 @@
     ],
     "modules" : [
         {
+            "name": "blueprint-compiler",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
+                    "tag": "v0.8.1"
+                }
+            ]
+        },
+        {
             "name" : "solanum",
             "buildsystem" : "meson",
             "config-opts": [
@@ -41,8 +52,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/World/Solanum/uploads/b2ff562917484d832b7b7785a12c1ce6/solanum-3.0.1.tar.xz",
-                    "sha256" : "7ac120563f5fef8038f87e28afd7fc5d2794412e1bf71184c99d5beabc990753"
+                    "url" : "https://gitlab.gnome.org/World/Solanum/uploads/50091109a2072c0c75ce22f8f16d0861/solanum-4.0.0.tar.xz",
+                    "sha256" : "3b73e3814af4a038974f844deb75d98d7fff49ec0b869136c27f85d5075d171b"
                 }
             ]
         }
