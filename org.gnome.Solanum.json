@@ -34,6 +34,9 @@
     "modules" : [
         {
             "name": "blueprint-compiler",
+            "cleanup": [
+                "*"
+            ],
             "buildsystem": "meson",
             "sources": [
                 {
