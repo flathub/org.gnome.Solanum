@@ -57,6 +57,10 @@
                     "type" : "archive",
                     "url" : "https://gitlab.gnome.org/World/Solanum/uploads/fb1f79ad280a6f0d09312a235dcc9bf9/solanum-5.0.0.tar.xz",
                     "sha256" : "35f21b64226319cdf145e1acb55af6ef49c0267720775ef3dfa6bbbf7e5d6fa1"
+                },
+                {
+                    "type" : "patch",
+                    "path" : "fix-appdata.patch"
                 }
             ]
         }
