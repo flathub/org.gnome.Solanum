@@ -1,0 +1,41 @@
+From cd100f5826941b1d6699ce6bb10e0fef98ad51fb Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Sun, 28 Jul 2024 13:39:11 +0300
+Subject: [PATCH] Fix appdata papercuts
+
+- Correct duplicated screenshot
+- Remove one of purism tag to pass validation
+- Mark one of screenshot as default
+---
+ data/org.gnome.Solanum.appdata.xml.in.in | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/data/org.gnome.Solanum.appdata.xml.in.in b/data/org.gnome.Solanum.appdata.xml.in.in
+index 30015e0..8966ae7 100644
+--- a/data/org.gnome.Solanum.appdata.xml.in.in
++++ b/data/org.gnome.Solanum.appdata.xml.in.in
+@@ -13,9 +13,11 @@
+     </p>
+   </description>
+   <screenshots>
+-    <screenshot>
++    <screenshot type="default">
+       <image type="source">https://gitlab.gnome.org/World/Solanum/-/raw/main/data/screenshots/screenshot-1.png</image>
+-      <image type="source">https://gitlab.gnome.org/World/Solanum/-/raw/main/data/screenshots/screenshot-2.png</image>
++    </screenshot>
++    <screenshot>
++        <image type="source">https://gitlab.gnome.org/World/Solanum/-/raw/main/data/screenshots/screenshot-2.png</image>
+     </screenshot>
+   </screenshots>
+   <launchable type="desktop-id">@APP_ID@.desktop</launchable>
+@@ -114,7 +116,6 @@
+   <content_rating type="oars-1.1" />
+   <provides>org.gnome.Solanum.desktop</provides>
+   <custom>
+-    <value key="Purism::form_factor">workstation</value>
+     <value key="Purism::form_factor">mobile</value>
+   </custom>
+ </component>
+--
+libgit2 1.7.2
+
