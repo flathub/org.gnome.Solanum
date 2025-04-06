@@ -1,7 +1,7 @@
 {
     "id" : "org.gnome.Solanum",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "46",
+    "runtime-version" : "48",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -42,7 +42,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-                    "tag": "v0.10.0"
+                    "tag": "v0.16.0"
                 }
             ]
         },
@@ -55,12 +55,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/World/Solanum/uploads/fb1f79ad280a6f0d09312a235dcc9bf9/solanum-5.0.0.tar.xz",
-                    "sha256" : "35f21b64226319cdf145e1acb55af6ef49c0267720775ef3dfa6bbbf7e5d6fa1"
-                },
-                {
-                    "type" : "patch",
-                    "path" : "fix-appdata.patch"
+                    "url" : "https://gitlab.gnome.org/-/project/12672/uploads/efd4a4133c706af113ecbc0e9be18530/solanum-6.0.0.tar.xz",
+                    "sha256" : "ada53f29d2b86f3edbb82e97462875e6011937783a7da53edc7f337df0e1529b"
                 }
             ]
         }
